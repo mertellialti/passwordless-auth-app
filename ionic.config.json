@@ -1,0 +1,7 @@
+{
+  "name": "passwordless-auth-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

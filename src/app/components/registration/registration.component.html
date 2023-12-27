@@ -1,0 +1,39 @@
+<div>
+  <ion-card *ngIf="!isRegistrationOptionsPhase">
+    <ion-card-header>
+      <ion-card-title>Registration</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-input
+        [(ngModel)]="userName"
+        type="text"
+        placeholder="User Id"
+      ></ion-input>
+      <ion-button (click)="registerUser()" expand="block" shape="round">
+        Register
+      </ion-button>
+      <div>
+        <ion-label>{{ message }}</ion-label>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="isRegistrationOptionsPhase">
+    <ion-card-header>
+      <ion-card-title>Registration Options</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-input
+        [value]="userName"
+        type="text"
+        placeholder="User Id"
+        readonly="true"
+      ></ion-input>
+      <ion-button [disabled]="userName.length < 3" expand="block" shape="round">
+        Register
+      </ion-button>
+      <div>
+        <ion-label>{{ message }}</ion-label>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</div>

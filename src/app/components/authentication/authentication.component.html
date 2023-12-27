@@ -1,0 +1,14 @@
+<div>
+  <ion-card>
+    <ion-card-header>      
+      <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-input [(ngModel)]="username" type="text" placeholder="username"></ion-input>
+      <ion-button [disabled]="username.length < 3" (click)="authenticate()" expand="block" fill="clear" shape="round">
+        Login
+      </ion-button>
+      <ion-label>Message: {{message}}</ion-label>
+    </ion-card-content>
+  </ion-card>
+</div>
